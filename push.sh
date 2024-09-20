@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Avoid pushing to specified branches by mistake.
+# Avoid pushing to specified branches by mistake. Essentially handled for Oh My Zsh gp and gpsup commands.
 
 # Get the current branch name
 current_branch=$(git branch --show-current)
