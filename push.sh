@@ -13,9 +13,10 @@ if [[ " ${protected_branches[@]} " =~ " ${current_branch} " ]]; then
   echo "IDIOT!! IDIOT!! IDIOT!! This is a protected branch.. Do not push here"
   say "Protected branch.. PUSH FAILED"
 else
-  if [[ "$0" == *"gpsup"* ]]; then
+  if [[ "$1" == "set-upstream" ]]; then
     git push --set-upstream origin "$current_branch"
   else
     git push
   fi
+  echo $0
 fi
